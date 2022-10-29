@@ -9,6 +9,7 @@
     <script src="calculator.js" defer></script>
   </head>
   <body>
+    <!-- Calculator body and head container -->
     <div id="calcBody">
       <div id="calcHead">
         <div id="calcBrand">
@@ -18,39 +19,41 @@
         <div id="solarPanel"></div>
       </div>
       <div id="calcDisp"></div>
+
+      <!-- Calculator button container -->
       <div id="calcBtnCont">
-        <div id="firstRow">
+        <div id="firstRow" class="calcRow">
           <button id="mrc">MRC</button>
           <button id="m-">M-</button>
           <button id="m+">M+</button>
           <button id="sqRoot">√</button>
           <button id="sign">+/-</button>
         </div>
-        <div id="secondRow">
+        <div id="secondRow" class="calcRow">
           <button id="onReset">C/AC</button>
-          <button id="mu">MU</button>
-          <button id="percent">%</button>
-          <button id="divideBtn">/</button>
+          <button id="mu" class="generalBtn">MU</button>
+          <button id="percent" class="generalBtn">%</button>
+          <button id="divideBtn" class="generalBtn">/</button>
         </div>
-        <div id="thirdRow">
-          <button id="7Btn">7</button>
-          <button id="8Btn">8</button>
-          <button id="9Btn">9</button>
-          <button id="multBtn">X</button>
+        <div id="thirdRow" class="calcRow">
+          <button id="7Btn" class="generalBtn">7</button>
+          <button id="8Btn" class="generalBtn">8</button>
+          <button id="9Btn" class="generalBtn">9</button>
+          <button id="multBtn" class="generalBtn">X</button>
         </div>
-        <div id="fourthRow">
-          <button id="4Btn">4</button>
-          <button id="5Btn">5</button>
-          <button id="6Btn">6</button>
-          <button id="minusBtn">-</button>
+        <div id="fourthRow" class="calcRow">
+          <button id="4Btn" class="generalBtn">4</button>
+          <button id="5Btn" class="generalBtn">5</button>
+          <button id="6Btn" class="generalBtn">6</button>
+          <button id="minusBtn" class="generalBtn">-</button>
         </div>
-        <div id="fifthRow">
-          <button id="1Btn">1</button>
-          <button id="2Btn">2</button>
-          <button id="3Btn">3</button>
-          <button id="ceroBtn">0</button>
+        <div id="fifthRow" class="calcRow">
+          <button id="1Btn" class="generalBtn">1</button>
+          <button id="2Btn" class="generalBtn">2</button>
+          <button id="3Btn" class="generalBtn">3</button>
+          <button id="ceroBtn" class="generalBtn">0</button>
         </div>
-        <div id="sixthRow">
+        <div id="sixthRow" class="calcRow">
           <button id="floatBtn">.</button>
           <button id="equalBtn">=</button>
           <button id="plusBtn">+</button>
