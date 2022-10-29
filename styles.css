@@ -25,9 +25,9 @@ body {
   height: 400px;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
   border-radius: 15px;
   box-shadow: 4px 4px #3e3e3e;
+  background: #a29e9e;
 }
 
 /* Calculator head */
@@ -48,7 +48,7 @@ body {
 #calcDisp {
   width: 200px;
   height: 50px;
-  background-color: rgb(184, 184, 184);
+  background-color: rgb(200, 200, 200);
   margin-bottom: 15px;
   border-radius: 4px;
 }
@@ -60,10 +60,16 @@ body {
   gap: 5px;
 }
 
+#onReset {
+  background: #9c0000;
+}
+
 button {
   border-style: none;
   border-radius: 5px;
-  box-shadow: 1px 1px;
+  box-shadow: 1px 1px #3e3e3e;
+  background: #777777;
+  color: white;
 }
 
 .calcRow {
