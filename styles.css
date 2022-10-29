@@ -6,24 +6,66 @@
 body {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: auto;
 }
 
 #calcBody {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  height: 700px;
+  width: 250px;
+  height: 400px;
   justify-content: center;
   align-items: center;
+  border: 1px solid black;
 }
 
 #calcHead {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#solarPanel {
+  width: 100px;
+  height: 40px;
+  background-color: rgb(12, 7, 7);
+}
+
+#calcDisp {
+  width: 200px;
+  height: 50px;
+  background-color: rgb(184, 184, 184);
+  margin-bottom: 15px;
 }
 
 #calcBtnCont {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+#firstRow > button {
+  padding: 5px;
+}
+
+#secondRow > button {
+  padding: 15px;
+}
+
+#thirdRow > button {
+  padding: 15px;
+}
+
+#fourthRow > button {
+  padding: 15px;
+}
+
+#fifthRow > button {
+  padding: 15px;
+}
+
+#sixthRow > button {
+  padding: 15px;
 }
