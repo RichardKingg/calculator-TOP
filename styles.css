@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+#calcBody {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 700px;
+  justify-content: center;
+  align-items: center;
+}
+
+#calcHead {
+  display: flex;
+  justify-content: space-between;
+}
+
+#calcBtnCont {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
