@@ -19,8 +19,6 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 100px;
-  padding-top: 10px;
-  padding-bottom: 10px;
   width: 250px;
   height: 400px;
   justify-content: center;
@@ -74,16 +72,16 @@ button {
 
 .calcRow {
   display: flex;
-  gap: 4px;
+  gap: 5px;
   justify-content: space-between;
 }
 
-.generalBtn {
-  width: 50px;
+.btn {
+  width: 40px;
 }
 
 .calcRow > button {
-  padding: 14px;
+  padding: 10px;
   text-align: center;
 }
 
