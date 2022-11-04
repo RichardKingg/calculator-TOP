@@ -13,6 +13,8 @@ const operatorBtns = document.querySelectorAll("[data-operator]");
 const clrBtn = document.getElementById("onReset");
 const equalsBtn = document.getElementById("equalsBtn");
 const pointBtn = document.getElementById("pointBtn");
+const percentBtn = document.getElementById("percentBtn");
+const signBtn = document.getElementById("signBtn");
 
 let firstOperand = "";
 let secondOperand = "";
@@ -23,6 +25,8 @@ let shouldResetScreen = false;
 clrBtn.addEventListener("click", clear);
 equalsBtn.addEventListener("click", evaluate);
 pointBtn.addEventListener("click", appendPoint);
+percentBtn.addEventListener("click", evalPerc);
+signBtn.addEventListener("click", changeSign);
 
 numBtns.forEach((button) =>
   button.addEventListener("click", () => appendNum(button.textContent))
@@ -53,6 +57,11 @@ function clear() {
   currentOp = null;
 }
 
+function changeSign() {
+  firstOperand = calcDisp.textContent;
+  calcDisp.textContent = sign(firstOperand);
+}
+
 //function for adding "." to display, if there is already ".", return
 function appendPoint() {
   if (calcDisp.textContent === "") {
@@ -71,6 +80,13 @@ function runOperation(operator) {
   currentOp = operator;
   calcDisp.textContent = `${firstOperand} ${currentOp}`;
   shouldResetScreen = true;
+}
+
+//function for evaluating percent function
+function evalPerc() {
+  firstOperand = calcDisp.textContent;
+  calcDisp.textContent = percentage(firstOperand);
+  currentOp = null;
 }
 
 //function for the result
@@ -103,6 +119,19 @@ function divi(a, b) {
   return a / b;
 }
 
+function markUP(a, b) {
+  let mk = 100 - b;
+  let c = (b * a) / mk;
+  return a + c;
+}
+
+function percentage(a) {
+  return a / 100;
+}
+
+function sign(a) {
+  return a * -1;
+}
 //function for rounding numbers
 function rounder(number) {
   return Math.round(number * 1000) / 1000;
@@ -125,6 +154,9 @@ function operate(operator, a, b) {
     case "/":
       if (b === 0) return null;
       else return divi(a, b);
+
+    case "MU":
+      return markUP(a, b);
 
     default:
       return null;
