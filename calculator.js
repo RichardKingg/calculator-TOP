@@ -15,6 +15,7 @@ const equalsBtn = document.getElementById("equalsBtn");
 const pointBtn = document.getElementById("pointBtn");
 const percentBtn = document.getElementById("percentBtn");
 const signBtn = document.getElementById("signBtn");
+const sqRootBtn = document.getElementById("sqRootBtn");
 
 let firstOperand = "";
 let secondOperand = "";
@@ -27,6 +28,7 @@ equalsBtn.addEventListener("click", evaluate);
 pointBtn.addEventListener("click", appendPoint);
 percentBtn.addEventListener("click", evalPerc);
 signBtn.addEventListener("click", changeSign);
+sqRootBtn.addEventListener("click", sRoot);
 
 numBtns.forEach((button) =>
   button.addEventListener("click", () => appendNum(button.textContent))
@@ -55,6 +57,11 @@ function clear() {
   firstOperand = "";
   secondOperand = "";
   currentOp = null;
+}
+
+function sRoot() {
+  firstOperand = calcDisp.textContent;
+  calcDisp.textContent = rounder(Math.sqrt(firstOperand));
 }
 
 function changeSign() {
